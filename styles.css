@@ -143,9 +143,18 @@ figcaption b { color: var(--ink); font-family: var(--f-display); }
 .title-box .expansion { color: color-mix(in srgb, var(--on-sapienza) 78%, transparent); margin: 0; }
 .title-box .expansion b { color: var(--on-sapienza); }
 
-/* Colosseum photo band; the red title box overlaps its lower-left edge */
-.hero-photo { background: var(--ink); line-height: 0; }
-.hero-photo img { width: 100%; max-width: none; height: clamp(240px, 46vw, 640px); object-fit: cover; object-position: 50% 58%; }
+/* Title band: red box at 90% of page width, text left, Colosseum photo right */
+.hero-band { padding-top: 2.5rem; }
+.title-box { width: 90%; max-width: none; margin: 0 auto; padding: 0; gap: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 40%); }
+.title-text { padding: clamp(1.4rem, 4vw, 2.8rem); display: grid; gap: 0.6rem; align-content: center; min-width: 0; }
+.title-text .eyebrow { color: color-mix(in srgb, var(--on-sapienza) 75%, transparent); margin: 0 0 0.2rem; }
+.title-box h1 { font-size: var(--s4); font-weight: 800; letter-spacing: 0.04em; }
+.title-photo { position: relative; aspect-ratio: 1400 / 1019; min-height: 100%; }
+.title-photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 50%; }
 .hero { padding-block: 0; }
-.title-box { position: relative; z-index: 1; margin-top: clamp(-5.5rem, -9vw, -2rem); box-shadow: 0 10px 30px rgb(0 0 0 / 0.18); }
-.title-box .eyebrow { color: color-mix(in srgb, var(--on-sapienza) 75%, transparent); margin: 0 0 0.2rem; }
+.hero .lede { margin-top: 2rem; }
+@media (max-width: 700px) {
+  .hero-band { padding-top: 1.25rem; }
+  .title-box { width: auto; margin-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); grid-template-columns: 1fr; }
+  .title-photo { order: -1; }
+}
