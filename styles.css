@@ -142,3 +142,10 @@ figcaption b { color: var(--ink); font-family: var(--f-display); }
 .title-box h1 { color: var(--on-sapienza); }
 .title-box .expansion { color: color-mix(in srgb, var(--on-sapienza) 78%, transparent); margin: 0; }
 .title-box .expansion b { color: var(--on-sapienza); }
+
+/* Colosseum photo band; the red title box overlaps its lower-left edge */
+.hero-photo { background: var(--ink); line-height: 0; }
+.hero-photo img { width: 100%; max-width: none; height: clamp(240px, 46vw, 640px); object-fit: cover; object-position: 50% 58%; }
+.hero { padding-block: 0; }
+.title-box { position: relative; z-index: 1; margin-top: clamp(-5.5rem, -9vw, -2rem); box-shadow: 0 10px 30px rgb(0 0 0 / 0.18); }
+.title-box .eyebrow { color: color-mix(in srgb, var(--on-sapienza) 75%, transparent); margin: 0 0 0.2rem; }
