@@ -145,11 +145,11 @@ figcaption b { color: var(--ink); font-family: var(--f-display); }
 
 /* Title band: red box at 90% of page width, text left, Colosseum photo right */
 .hero-band { padding-top: 2.5rem; }
-.title-box { width: 90%; max-width: none; margin: 0 auto; padding: 0; gap: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 40%); }
+.title-box { width: 90%; max-width: none; margin: 0 auto; padding: 0; gap: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 34%); }
 .title-text { padding: clamp(1.4rem, 4vw, 2.8rem); display: grid; gap: 0.6rem; align-content: center; min-width: 0; }
 .title-text .eyebrow { color: color-mix(in srgb, var(--on-sapienza) 75%, transparent); margin: 0 0 0.2rem; }
 .title-box h1 { font-size: var(--s4); font-weight: 800; letter-spacing: 0.04em; }
-.title-photo { position: relative; aspect-ratio: 1400 / 1019; min-height: 100%; }
+.title-photo { position: relative; aspect-ratio: 1200 / 1085; min-height: 100%; }
 .title-photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 50%; }
 .hero { padding-block: 0; }
 .hero .lede { margin-top: 2rem; }
